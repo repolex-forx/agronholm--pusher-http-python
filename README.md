@@ -1,1 +1,113 @@
-Initializing
+# Repolex Knowledge Graph of agronholm/pusher-http-python
+
+RDF knowledge graph data for [agronholm/pusher-http-python](https://github.com/agronholm/pusher-http-python), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download agronholm/pusher-http-python
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── 57dd636c13389a5bded9ca1122607927932ed680
+│   │       └── chunk-001.nq.gz
+│   └── repolex
+│       └── 57dd636c13389a5bded9ca1122607927932ed680
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 0519b734a2da61005fd1b11b9b9d1ca665b564a5.nq.gz
+│   ├── 0869efb8cf13b92ff552d3aa6b515cd7cf095940.nq.gz
+│   ├── 088376d70689cb472f7c9074b16da40709c9d4c5.nq.gz
+│   ├── 0e3d7423eaac37a53aed597d369bfc4ca869025a.nq.gz
+│   ├── 0f11181d25d0b8e8174f4676a743f233d0f40802.nq.gz
+│   ├── 11a9360155927e810de87125e162598b7a0bdaa5.nq.gz
+│   ├── 2125fd3daada53d828ea24fac0c991a145318775.nq.gz
+│   ├── 40022a903fd3193efc8b871c766b2d5f729c17f1.nq.gz
+│   ├── 440e52d0af762cd0ebae26a124f1c53855d62057.nq.gz
+│   ├── 50b5e1859b98612867f1236474b962761bd8ec88.nq.gz
+│   ├── 6bfc2b4dd649000410f2199b75ed67a10965f922.nq.gz
+│   ├── 6e7694d267568980d84f2d298b2b427acc53d9d7.nq.gz
+│   ├── 6fe84d228e7ac63b2be36b66dec976d092b5105d.nq.gz
+│   ├── 70b09b144d0e003397449295e5dda6471d966ff7.nq.gz
+│   ├── 714b92f5e4a5549e1d6486eebaa214eb04e035bc.nq.gz
+│   ├── 770413d12df5c1e9cac10110e818e35bef798b24.nq.gz
+│   ├── 7f1d3040b4cafba561ea258d77566d7ce16f8e48.nq.gz
+│   ├── 82a7e4feb274ff2a0cd2bbf409810d2d71a42e37.nq.gz
+│   ├── 88bffc634906a2709696bd9af0534a34d77f1b88.nq.gz
+│   ├── 8b44a65fb4a12f1a2ed577cc0e3222416d7410b7.nq.gz
+│   ├── 965c489981af7f7c1046567309c8433a7b11b4d9.nq.gz
+│   ├── 9d44555db735a602154a2db9a10b51e6d485f73d.nq.gz
+│   ├── a69ff7680e1f38fd34fea36b613a6e1e4418447d.nq.gz
+│   ├── b717c81e6c324da411b740bbd3f5ff36f872a836.nq.gz
+│   ├── be2cb3c4b7f7f38ded92356d2bd469c7e1fbef3d.nq.gz
+│   ├── d194f8f4bc275fb50dc18ac20afed8b8ac24ecd7.nq.gz
+│   ├── d5af1802a5525cbaf4383a967dc4fee0df7c9f83.nq.gz
+│   ├── def1aaa3e9f6d8eda80e229870a4a5ee63002e14.nq.gz
+│   ├── dfb8774ca0165e7f4b474cbaa352d92e40e4d532.nq.gz
+│   ├── e0bca5eb957522298ec7673f8e3fbce9c4664d97.nq.gz
+│   ├── e0dfaf55be0c32a1a3dee83e6967de4ea663de9f.nq.gz
+│   ├── e69de29bb2d1d6434b8b29ae775ad8c2e48c5391.nq.gz
+│   ├── e9ee99658d215a8ee989e2d655351f7c6aa8eb1a.nq.gz
+│   ├── f451e385d6b6a5f14fa34df6041db6cc202d1ee8.nq.gz
+│   ├── f90522c57c9e91570fec179114a938cdf32e5605.nq.gz
+│   ├── fd9c72654b42eeaf47661641f780283cadbe7b01.nq.gz
+│   ├── fe62be21ddb30a9b6d6f72b6877399cc7a6da453.nq.gz
+│   └── ff915db5fb3621cf5205e45000de0abf44469164.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── filetree
+│   └── 57dd636c13389a5bded9ca1122607927932ed680.nq.gz
+└── tag
+    └── tag.nq.gz
+
+11 directories, 44 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[agronholm/pusher-http-python](https://github.com/agronholm/pusher-http-python)
+
+---
+*Parsed on 2026-10-11 by [repolex](https://repolex.ai)*
