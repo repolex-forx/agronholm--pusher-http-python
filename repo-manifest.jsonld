@@ -8,7 +8,7 @@
     {
       "@id": "https://repolex.ai/r/agronholm/pusher-http-python/commit/57dd636c13389a5bded9ca1122607927932ed680",
       "git:hexsha": "57dd636c13389a5bded9ca1122607927932ed680",
-      "repolex:parseStatus": "metadata_complete",
+      "repolex:parseStatus": "ast_complete",
       "git:tagName": "v2.0.0"
     },
     {
